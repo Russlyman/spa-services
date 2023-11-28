@@ -1,0 +1,20 @@
+<CiscoIPPhoneMenu>
+  <Title>{{name}}</Title>
+  <Prompt>Select a number to dial</Prompt>
+  <SoftKeyItem>
+    <Name>Dial</Name>
+    <URL>SoftKey:Select</URL>
+    <Position>1</Position>
+  </SoftKeyItem>
+  <SoftKeyItem>
+    <Name>Back</Name>
+    <URL>SoftKey:Exit</URL>
+    <Position>3</Position>
+  </SoftKeyItem>
+  {{#each details}}
+    <MenuItem>
+      <Name>{{this.type}}</Name>
+      <URL>{{this.number}}</URL>
+    </MenuItem>
+  {{/each}}
+</CiscoIPPhoneMenu>

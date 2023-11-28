@@ -1,0 +1,37 @@
+<CiscoIPPhoneMenu>
+  <Title>{{name}}</Title>
+  <Prompt>Page {{page}}/{{maxPage}}{{#if search}} - Results for '{{search}}'{{/if}}</Prompt>
+  <SoftKeyItem>
+    <Name>Select</Name>
+    <URL>SoftKey:Select</URL>
+    <Position>2</Position>
+  </SoftKeyItem>
+  <SoftKeyItem>
+    <Name>Back</Name>
+    <URL>TODO</URL>
+    <Position>4</Position>
+  </SoftKeyItem>
+  {{#if people}}
+    <SoftKeyItem>
+      <Name>Search</Name>
+      <URL>TODO</URL>
+      <Position>1</Position>
+    </SoftKeyItem>
+  {{/if}}
+  <SoftKeyItem>
+    <Name>NextPage</Name>
+    <URL>TODO</URL>
+    <Position>3</Position>
+  </SoftKeyItem>
+  <SoftKeyItem>
+    <Name>PrevPage</Name>
+    <URL>TODO</URL>
+    <Position>6</Position>
+  </SoftKeyItem>
+  {{#each people}}
+    <MenuItem>
+      <Name>{{this.name}}</Name>
+      <URL>{{@root.url}}{{this.id}}</URL>
+    </MenuItem>
+  {{/each}}
+</CiscoIPPhoneMenu>
