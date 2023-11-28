@@ -10,7 +10,6 @@ import { User } from './user/user.entity';
 import { ConfigService } from '@nestjs/config';
 import { validate } from './validation/env.validation';
 import { AuthModule } from './auth/auth.module';
-import { TestModule } from './test/test.module';
 
 @Module({
   imports: [
@@ -40,7 +39,6 @@ import { TestModule } from './test/test.module';
     GroupModule,
     PersonModule,
     AuthModule,
-    TestModule,
   ],
 })
 export class AppModule {}
